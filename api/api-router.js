@@ -1,13 +1,13 @@
-const router = require("express").Router();
+const router = require('express').Router();
 
-const authRouter = require("../auth/auth-router");
-const userRouter = require("../users/user-router");
+const authRouter = require('../auth/auth-router');
+const userRouter = require('../users/user-router');
 
-router.use("/auth", authRouter);
-router.use("/user", userRouter);
+router.use('/auth', authRouter);
+router.use('/users', userRouter);
 
-router.get("/", (req, res) => {
-  res.json({ api: "running" });
+router.get('/', (req, res) => {
+  res.json({ api: 'running' });
 });
 
 module.exports = router;
